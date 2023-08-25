@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Online Quiz Platform</title>
+
+  <style>
+      ::-webKit-scrollbar{
+      display:none;
+      }
+
+          {
+          box-sizing: border-box;}
+
+        body {
+
+            background-image: url(https://meanderer007.files.wordpress.com/2018/04/monument-valley-9-1.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment : fixed;
+<!--
+        }
+
+        .navbar {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+            background-color: grey;
+            color: blue;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            margin: .5rem;
+        }
+
+        .navbar-links {
+            background-color : black;
+            height: 100%;
+        }
+
+        .navbar-links ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-links li {
+            list-style: none;
+        }
+
+        .navbar-links li a {
+            display: block;
+            text-decoration: none;
+            color: White;
+            padding: 1rem;
+        }
+
+        .navbar-links li:hover {
+            background-color: grey;
+        }
+
+        .toggle-button {
+            position: absolute;
+            top: .75rem;
+            right: 1rem;
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+.toggle-button .bar {
+            height: 3px;
+            width: 100%;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 800px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .toggle-button {
+                display: flex;
+            }
+
+            .navbar-links {
+                display: none;
+                width: 100%;
+            }
+
+            .navbar-links ul {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .navbar-links ul li {
+                text-align: center;
+                color:black;
+            }
+
+            .navbar-links ul li a {
+                padding: .5rem 1rem;
+                color:black;
+                background-color:black
+            }
+
+            .navbar-links.active {
+                display: flex;
+            }
+        }
+        h1{
+        text-align:center;
+        padding : 20px;
+        font-size: 60px;
+
+        }
+
+      /* Updated styles for the Logout button */
+      .pure-button {
+        display: block;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        border: none;
+        background: none;
+        padding: 1rem;
+        cursor: pointer;
+      }
+
+      .pure-button:hover {
+        background-color: grey;
+      }
+  </style>
+</head>
+<body>
+<form th:action="@{/navigation}" method="GET">
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+    <nav class="navbar1">
+      <div class="title"></div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="/index">Home</a></li><br>
+          <li><a href="/profile-register">Profile Registration</a></li><br>
+
+          <li><a href="/exam-register">Exam Registration</a></li><br>
+          <li><a href="/quiz-register">Quiz</a></li><br>
+          <li><a href="/contact">Contact Us</a></li><br>
+          <li><a href="/about">About</a></li><br>
+          <li><a href="/logout">Logout</a></li><br>
+
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <h1>ONLINE QUIZ PLATFORM</h1>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/main.js"></script>
+</form>
+</body>
+</html>

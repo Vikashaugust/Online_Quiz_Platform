@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Colorlib Templates">
+  <meta name="author" content="Colorlib">
+  <meta name="keywords" content="Colorlib Templates">
+  <title>Update Profile Registration</title>
+  <!-- Icons font CSS-->
+  <link href="../static/vendor/mdi-font/css/material-design-iconic-font.min.css" th:href="@{/vendor/mdi-font/css/material-design-iconic-font.min.css}" rel="stylesheet" media="all">
+  <link href="../static/vendor/font-awesome-4.7/css/font-awesome.min.css" th:href="@{/vendor/font-awesome-4.7/css/font-awesome.min.css}" rel="stylesheet" media="all">
+  <!-- Font special for pages-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <!-- Icons font CSS-->
+  <!-- Vendor CSS-->
+  <link href="../static/vendor/select2/select2.min.css" th:href="@{/vendor/select2/select2.min.css}" rel="stylesheet" media="all">
+  <link href="../static/vendor/datepicker/daterangepicker.css" th:href="@{/vendor/datepicker/daterangepicker.css}" rel="stylesheet" media="all">
+  <!--  <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet">-->
+  <!-- Main CSS-->
+  <link href="../static/css/main.css" th:href="@{/css/main.css}"rel="stylesheet" >
+</head>
+<body>
+
+<header  th:include="navigation.html"></header>
+<form  th:action="@{/update}" th:object="${profile}" method="post">
+<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+  <div class="wrapper wrapper--w790">
+    <div class="card card-5">
+      <div class="card-heading">
+        <h2 class="title">📖Update Profile Registration📖</h2>
+      </div>
+      <div class="card-body">
+
+
+          <p style="text-align=center"><b><font size="+2">Personal Details:</font></b></p><br>
+          <input type="hidden" th:field="*{id}">
+
+          <div class="name"><b>Profile id:</b></div>
+          <div class="value">
+            <div >
+              <div class="input-group">
+                <label class="label--desc" for="profileId"></label>
+                <input class="input--style-5" type="text" placeholder="Enter Profile id" th:field="*{profileId}" id="profileId" required>
+              </div><br>
+              <div>
+                <!--    <p>Personal Details:</p>-->
+                <!--    <input type="hidden" th:field="*{id}">-->
+
+                <!--    <label for="profileId"><b>Profile id:</b></label>-->
+                <!--    <input type="text" placeholder="Enter profileID" th:field="*{profileId}" id="profileId" required></div>-->
+                <div class="name"><b>Name:</b></div>
+                <div class="value">
+                  <div>
+                    <div class="input-group-desc">
+                      <label class="label--desc" for="name"></label>
+                      <input class="input--style-5" placeholder="Enter Name" type="text" th:field="*{name}" id="name" required>
+                    </div><br>
+
+                    <div class="name"><b>Father Name:</b></div>
+                    <div class="value">
+                      <div>
+                        <div class="input-group-desc">
+                          <label class="label--desc" for="fatherName"></label>
+                          <input class="input--style-5" placeholder="Enter Father Name" type="text" th:field="*{fatherName}" id="fatherName" required>
+                        </div><br>
+
+                        <div class="name"><b>Mother Name:</b></div>
+                        <div class="value">
+                          <div>
+                            <div class="input-group-desc">
+                              <label class="label--desc" for="motherName"></label>
+                              <input class="input--style-5" placeholder="Enter Mother Name" type="text" th:field="*{motherName}" id="motherName" required>
+                            </div><br>
+
+                            <div class="name"><b>Date of Birth:</b></div>
+                            <div class="value">
+                              <div>
+                                <div class="input-group-desc">
+                                  <label class="label--desc" for="date"></label>
+                                  <input class="input--style-5" placeholder="Enter Date" type="date" th:field="*{dob}" id="date" required>
+                                </div><br>
+
+
+                                <div class="form-row">
+                                  <div class="name"><b>Gender:</b></div><br>
+                                  <div class="value">
+                                    <div class="input-group">
+                                      <div class="rs-select2 js-select-simple select--no-search">
+                                        <select id="gender" th:field="*{gender}">
+                                          <label class="label--desc" for="gender"></label>
+                                          <option value="Male">Male</option>
+                                          <option value="Female">Female</option>
+                                          <option value="Other">Other</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div><br>
+                              <p style="text-align=center"><b><font size="+2">Contact Details:</font></b></p><br>
+
+                              <div class="name"><b>Contact Number:</b></div>
+                              <div class="value">
+                                <div >
+                                  <div class="input-group-desc">
+                                    <label class="label--desc" for="number"></label>
+                                    <input class="input--style-5" placeholder="Enter Contact Number" type="tel" th:field="*{phoneNumber}" id="number" required>
+                                  </div><br>
+
+                                  <div class="name"><b>Email:</b></div>
+                                  <div class="value">
+                                    <div>
+                                      <div class="input-group-desc">
+                                        <label class="label--desc" for="email"></label>
+                                        <input class="input--style-5" placeholder="Enter Email" type="text" th:field="*{emailId}" id="email" required>
+                                      </div><br>
+
+                                      <div class="name"><b>Address:</b></div>
+                                      <div class="value">
+                                        <div>
+                                          <div class="input-group-desc">
+                                            <label class="label--desc" for="address"></label>
+                                            <textarea class="input--style-5" placeholder="Enter Address"  th:field="*{address}" id="address" required></textarea>
+                                          </div><br>
+                                          <p style="text-align=center"><b><font size="+2">Educational Details:</font></b></p><br>
+
+                                          <div class="name"><b>Qualification:</b></div>
+                                          <div class="value">
+                                            <div class="input-group">
+                                              <div class="rs-select2 js-select-simple select--no-search">
+                                                <select  name="highestQualification">
+                                                  <label class="label--desc" ></label>
+                                                  <option disabled="disabled" selected="selected">Choose option</option>
+                                                  <option th:each="qualification : ${qualificationList}"
+                                                          th:text="${qualification.getHighestQualification()}"
+                                                          th:value="${qualification.getHighestQualification()}"></option>
+                                                </select>
+                                                <div class="select-dropdown"></div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div><br>
+
+                                      <div class="name"><b>College Name:</b></div>
+                                      <div class="value">
+                                        <div>
+                                          <div class="input-group-desc">
+                                            <label class="label--desc" for="college"></label>
+                                            <input class="input--style-5" placeholder="Enter College Name" type="text" th:field="*{collegeName}" id="college" required>
+                                          </div><br>
+
+                                          <div class="name"><b>Degree:</b></div>
+                                          <div class="value">
+                                            <div>
+                                              <div class="input-group-desc">
+                                                <label class="label--desc" for="degree"></label>
+                                                <input class="input--style-5" placeholder="Enter Degree" type="text" th:field="*{degree}" id="degree" required>
+                                              </div><br>
+
+                                              <div class="name"><b>Year of Passing:</b></div>
+                                              <div class="value">
+                                                  <div class="input-group-desc">
+                                                    <label class="label--desc" for="yop"></label>
+                                                    <input class="input--style-5" min="1950" max="2100" placeholder="Enter year of passing" type="number" th:field="*{yop}" id="yop" required>
+                                                  </div><br>
+
+                                                  <div class="name"><b>Field of Study:</b></div>
+                                                  <div class="value">
+                                                    <div>
+                                                      <div class="input-group-desc">
+                                                        <label class="label--desc" for="field"></label>
+                                                        <input class="input--style-5" placeholder="Enter field of study" type="text" th:field="*{field}" id="field" required>
+                                                      </div><br>
+
+                                                      <div>
+                                                        <button class="btn btn--radius-2 btn--red" type="submit">Submit</button>
+                                                      </div>
+
+
+
+
+
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="../static/vendor/select2/select2.min.js"></script>
+    <script src="../static/vendor/datepicker/moment.min.js"></script>
+    <script src="../static/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="../static/js/global.js"></script>
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+                                  </div>
+                                </div></div>
+                            </div>
+                          </div></div></div>
+                    </div></div></div></div>
+            </div>
+          </div></div>
+    </div>
+  </div>
+</div>
+</form>
+</body>
+</html>

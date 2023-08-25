@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Page</title>
+    <!-- Add your CSS and other resources here -->
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body>
+<form th:action="@{/index}" method="post">
+    <header  th:include="navigation.html"></header>
+    <!-- Add the rest of your page content here -->
+
+</form>
+</body>
+</html>

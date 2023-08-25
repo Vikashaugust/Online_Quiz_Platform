@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <style>
+h2{
+font-size:35px;
+margin-bottom:20px;
+color:#333
+font-style:italic;
+}
+h3{
+margin-top:-10px;
+   margin-bottom: 10px;
+   font-style:italic;
+   }
+ .about-us p{
+   font-size:18px;
+   Line-height:1.5;
+   color:#555;
+
+   margin-top: 10px;
+}
+.about-us img{
+display:block;
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+}
+.social-links{
+margin-bottom:20px;
+}
+.social-links a{
+display: inline-block;
+width: 40px;
+height: 40px;
+Line-height: 40px;
+text-align: center;
+border-radius: 50%;
+margin-right: 10px;
+color:#fff;
+background-color: #333;
+box-shadow: 0 2px 5px rgba(0.0,0,0.3);
+transition: all 0.4s ease
+}
+.social-links a:hover{
+transform: translateY(-3px);
+}
+
+.btn{
+text-decoration: none;
+color: #fff;
+display: inline-block;
+padding: 10px 20px;
+font-size: 18px;
+font-weight: bold;
+text-transform: uppercase;
+border-radius: 5px;
+background-color: #333;
+box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+transition: all 0.4 ease;
+}
+.btn:hover{
+transform: translateY(-3px);
+}
+
+@media screen and (max-width: 768px){
+.row{
+flex-direction: column;
+}
+.flex{
+max-width: 100%;
+}
+.about-us h2{
+font-size: 31px;
+}
+.about-us p{
+font-size: 16px;
+}
+.social-links a{
+width:30px;
+height: 30px;
+line-height: 30px;
+font-size: 14px;
+margin-right: 5px;
+}
+.btn{
+font-size: 16px;
+padding: 8px 16px;
+margin-bottom: 30px;
+}
+body{
+margin:10px;
+background-color: lightblue;
+}
+
+  .flex{
+    flex: 0 0 50px;-->
+    max-width: 50px;-->
+    padding:0 20px;-->
+   }
+
+</style>
+
+
+    <title>Responsive About Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<form th:action="@{/about}" method="post">
+    <div class="flex" align="center">
+
+        <!--                <img src="./about-us-icon-15.jpg">-->
+        <img src="https://t3.ftcdn.net/jpg/01/28/44/76/240_F_128447604_6deYSrg6bgH2F3YaoU0icdhvxNu4ReDN.jpg">
+    </div>
+    <div class="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="row">
+
+                    <h2>Discover Our Team's story </h2>
+                    <p> We are a team of passionate Individuals who are dedicated to providing
+                        high-quality products and services to our customers. Our academy's main mission
+                        to making people's lives easier and more enjoyable. Since
+                        then, we have been working hard to develop innovative solutions that meet the
+                        needs of our customers.Since you’re reading this article, probably the action
+                        you want visitors of your webpage to take is… taking your quiz. So the central
+                        purpose of that landing page is to motivate and activate the visitor to do so.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100010644463742"><i class="fab fa-facebook-f"></i> </a>
+                        <a href="https://twitter.com/Prahall26055714"><i class="fab fa-twitter"></i> </a>
+                        <a href="https://www.instagram.com/nayak_._prahallad/"><i class="fab fa-instagram"></i> </a>
+                    </div>
+                    <a href="" class="btn">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

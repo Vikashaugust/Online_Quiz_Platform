@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <!-- Required meta tags -->
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page -->
+    <title>Registration</title>
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-row {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      flex: 1;
+      font-weight: bold;
+    }
+
+    .value {
+      flex: 2;
+    }
+
+    .input--style-5 {
+      width: 100%;
+
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+
+    .input--style-5:focus {
+      border-color: #80bdff;
+      outline: none;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s;
+    }
+
+    select:focus {
+      border-color: #80bdff;
+      outline: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff4a4a;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e60000;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+<h1>Welcome To Online Quiz Registration Page</h1>
+
+<form th:action="@{/registration}" method="post">
+  <div class="name"><b>Name:</b></div>
+  <div class="value">
+    <div>
+      <div class="input-group-desc">
+        <label class="label--desc" for="username"></label>
+        <input class="input--style-5" type="text" name="username" id="username" required>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="form-row">
+    <div class="name"><b>Roles:</b></div>
+    <div class="value">
+      <div class="input-group">
+        <label class="label--desc" for="roles"></label>
+        <select id="roles" name="roles">
+          <option disabled="disabled" selected="selected">Choose option</option>
+          <option>USER</option>
+          <option>ADMIN</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="name"><b>Contact Number:</b></div>
+  <div class="value">
+    <div>
+      <div class="input-group-desc">
+        <label class="label--desc" for="number"></label>
+        <input class="input--style-5" type="tel" name="phoneNumber" id="number" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="name"><b>Email:</b></div>
+  <div class="value">
+    <div>
+      <div class="input-group-desc">
+        <label class="label--desc" for="email"></label>
+        <input class="input--style-5" type="email" name="emailId" id="email" required>
+      </div>
+    </div>
+  </div><br>
+
+  <div class="form-row">
+    <div class="name">Username</div>
+    <div class="value">
+      <div class="input-group">
+        <label class="label--desc" for="uid"></label>
+        <input class="input--style-5" type="text" name="uid" id="uid" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="name">Password:</div>
+    <div class="value">
+      <div class="input-group">
+        <label class="label--desc" for="password"></label>
+        <input class="input--style-5" type="password" name="password" id="password" required>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <button class="btn btn--radius-2 btn--red" type="submit">Submit</button>
+  </div>
+</form>
+
+<!-- Jquery JS -->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<!-- Vendor JS -->
+<script src="../static/vendor/select2/select2.min.js"></script>
+<script src="../static/vendor/datepicker/moment.min.js"></script>
+<script src="../static/vendor/datepicker/daterangepicker.js"></script>
+
+<!-- Main JS -->
+<script src="../static/js/global.js"></script>
+</body>
+
+</html>

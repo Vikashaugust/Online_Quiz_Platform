@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri : mongodb+srv://prahalladnayak2060:1234@cluster0.nfzfkzh.mongodb.net/?retryWrites=true&w=majority
+      database : Major

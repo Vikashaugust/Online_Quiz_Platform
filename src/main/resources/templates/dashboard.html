@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Online Quiz Platform</title>
+</head>
+<style>
+body{
+      background-image: url("https://img.freepik.com/free-photo/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background_1258-28311.jpg?w=1380&t=st=1690795330~exp=1690795930~hmac=aa8e09663a25fd96757944412142d490518045a829545687ce2badfee4a72bbd");
+}
+
+  h1{
+        text-align:center;
+        padding : 20px ;
+        font-size: 60px;
+        color : black;
+        border-color: black;
+        border:20px;
+
+        }
+
+        .button1{
+        border-radius : 40px;
+        padding : 20px 30px;
+        font-size : 1.5rem;
+        font-weight : 400;
+        text-transform:uppercase;
+        white-space: nowrap;
+        cursor:pointer;
+        }
+
+
+
+        .btn1{
+         background :#00FFFF ;
+         color:black;
+        }
+
+
+
+      .button3 {
+       display:flex;
+       justify-content: center;
+
+
+      }
+
+      button{
+      display:block;
+      margin:auto;
+
+      }
+
+</style>
+<body>
+<form th:action="@{/}" method="get">
+    <h1>ONLINE QUIZ PLATFORM</h1>
+    <div class="button3" >
+        <form action="/login" method="get">
+            <button class="button1 btn1" type="button" name="myButton" value="buttonValue" ><a href="/login">login</a></button>
+        </form>
+
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Error</title>
+  <style>
+        /* Internal CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        .lead {
+            font-size: 18px;
+        }
+        .btn-primary {
+            background-color: #3498db;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+  <div class="text-center">
+    <h1>You Write Wrong Name</h1>
+    <p th:text="${errorMessageName}" class="lead">An error occurred.</p>
+    <a href="/proleap-register" class="btn btn-primary">OK</a>
+  </div>
+</div>
+</body>
+</html>

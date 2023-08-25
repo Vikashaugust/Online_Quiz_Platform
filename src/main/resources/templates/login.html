@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5" >
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Website with Login and Registration Form</title>
+    <link th:href="@{/css/style.css}" href="../static/css/style.css" rel="stylesheet">    <!-- Unicons -->
+    <link rel="stylesheet" th:href='@{https://unicons.iconscout.com/release/v4.0.8/css/line.css}' href="#" />
+</head>
+
+<body>
+<form th:action="@{/login}" method="post">
+    <!--Header-->
+    <header class="header"><br>
+        <nav class="nav">
+            <h1 style="color:black;text-align:center;"><font size="+5">Online Quiz Platform</font></h1>
+
+        </nav>
+    </header>
+    <!-- Home -->
+    <section class="home">
+        <div class="form_container">
+            <i calss="uil uil-times form_close"></i>
+            <!-- Login from-->
+            <form>
+                <div class="form login_form">
+                    <form action="#">
+                        <h2>Login</h2>
+                        <div class="input_box">
+                            <label for="username">Username:</label>
+                            <input type="text" placeholder="Enter your id" name="username" id="username" required/>
+
+                        </div>
+                        <i class="uil uil-envelope-alt email"></i>
+                        <div class="input_box">
+                            <label for="password">Password:</label>
+                            <input type="password" placeholder="Enter your Password" name="password" id="password" required/>
+                        </div>
+                        <br><br>
+                        <div class="remember">
+                            <label for="rememberme">remember me:</label>
+                            <input type="checkbox" id="rememberme" name="rememberme" ></div>
+
+                        <button class="button">Login Now</button>
+                        <a href="/registration">Register here</a>
+
+                    </form>
+                </div>
+            </form>
+        </div>
+        </div>
+        </div>
+    </section>
+</form>
+</body>
+</html>

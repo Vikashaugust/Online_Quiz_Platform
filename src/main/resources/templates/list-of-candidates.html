@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>List of Candidate</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--    <link rel="stylesheet" href="../static/css/styles.css">-->
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" >
+
+</head>
+<body>
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">List of Candidate</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="text-center mb-4">Here Is the Candidates Who had Registered For The Exam</h4>
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead class="thead-primary">
+                        <tr style="height:100px">
+                            <th>Profile Id</th>
+                            <th>First Name</th>
+                            <th>Father Name</th>
+                            <th>Mother Name</th>
+                            <th>Date Of Birth</th>
+                            <th>Gender</th>
+                            <th>Phone Number</th>
+                            <th>Address</th>
+                            <th>Email Id</th>
+                            <th>Highest Qualification</th>
+                            <th>College Name</th>
+                            <th>Degree</th>
+                            <th>Year Of Pass</th>
+                            <th>Field</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="profile : ${candidate}" style="height:60px">
+                            <td th:text="${profile.getProfileId()}">Profile Id</td>
+                            <td th:text="${profile.name}">First Name</td>
+                            <td th:text="${profile.fatherName}">Father Name</td>
+                            <td th:text="${profile.motherName}">Mother Name</td>
+                            <td th:text="${profile.dob}">Date Of Birth</td>
+                            <td th:text="${profile.gender}">Gender</td>
+                            <td th:text="${profile.phoneNumber}">Phone Number</td>
+                            <td th:text="${profile.address}">Address</td>
+                            <td th:text="${profile.emailId}">Email Id</td>
+                            <td th:text="${profile.highestQualification}">Higher Qualification</td>
+                            <td th:text="${profile.collegeName}">College Name</td>
+                            <td th:text="${profile.degree}">Degree</td>
+                            <td th:text="${profile.yop}">Year Of Pass</td>
+                            <td th:text="${profile.field}">Field</td>
+                            <td class="border-bottom-0">
+                                <a th:href="@{'/update/' + ${profile.id}}" class="btn btn-primary">Update</a><br><br>
+                                <a th:href="@{'/delete/' + ${profile.profileId}}" class="btn btn-primary">Delete</a>
+                            </td>
+                            <!--              <td class="border-bottom-0"><a href="#" class="btn btn-primary">Sign Up</a></td>-->
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
